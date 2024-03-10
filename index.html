@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">    <title>Online Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <div class="homepage" id="gameState">
+            <h1>GAME OF 5 ELEMENTS</h1>
+            <div>
+                <button onclick="goToGame()" id="letPlaybtn">Let's Play</button>
+            </div>
+        </div>
+    </div>
+    <div class="fadeout" id="game">
+        <div class="choice-box">
+            <img onclick="callAll(this.id)" class="img_choice" src="images/fire.png" id="Fire" alt="Fire">
+            <img onclick="callAll(this.id)" class="img_choice" src="images/wood.png" id="Wood" alt="Wood">
+            <img onclick="callAll(this.id)" class="img_choice" src="images/earth.png" id="Earth" alt="Earth">
+            <img onclick="callAll(this.id)" class="img_choice" src="images/water.png" id="Water" alt="Water">
+            <img onclick="callAll(this.id)" class="img_choice" src="images/metal.png" id="Metal" alt="Metal">
+            <button class="choices" id="fire">Fire</button>
+            <button class="choices" id="wood">Wood</button>
+            <button class="choices" id="earth">Earth</button>
+            <button class="choices" id="water">Water</button>
+            <button class="choices" id="metal">Metal</button>
+        </div>
+        <div class="moves hidden" id="flavourText">
+            <h2 id="playerText"></h2>
+            <h2 id="computerText"></h2>
+            <img class="chosenMove" id="playerChose" src="" alt="Player Move">
+            <img class="chosenMove" id="computerChose" src="" alt="Computer Move">
+        </div>
+        <div class="results">
+            <h2 id="resultText"></h2>
+        </div>
+        <div class="score hidden">
+            <h2>Player:</h2>
+            <h2>Computer:</h2>
+            <h3 id="playerScore"></h3>
+            <h3 id="computerScore"></h3>
+        </div> 
+        <div class="reset hidden"><button onclick="resetScore()">Reset Score</button></div>
+    </div>    
+    <script src="five-elements.js"></script>
+</body>
+</html>
